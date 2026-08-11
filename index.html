@@ -19,7 +19,7 @@
 <link rel="canonical" href="https://sevensummitsrwanda.com/">
 <!-- DEMO DEPLOY ONLY. Remove this noindex when the site moves to sevensummitsrwanda.com, or the real site will not rank. -->
 <meta name="robots" content="noindex">
-<meta name="bb-build" content="2026-08-11-b">
+<meta name="bb-build" content="2026-08-11-d">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231f3a2e'/%3E%3Cpath d='M8 74 L24 46 L38 60 L52 32 L66 52 L76 42 L84 54 L92 74' fill='none' stroke='%23c9a24b' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preload" as="image" href="assets/hero.jpg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -306,6 +306,8 @@ html.rv .walk-rule{transform:scaleX(var(--p,1))}
 .contact-list .ic svg{width:17px;height:17px}
 .contact-list .lbl{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 .contact-list .val{font-size:.96rem;color:var(--cream);margin-top:3px;line-height:1.55}
+.contact-list .val a{display:inline-block;padding:6px 0;transition:color var(--t)}
+.contact-list .val a:hover{color:var(--gold-soft)}
 .send-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
 .send-row .btn{flex:1;min-width:180px}
 
@@ -762,8 +764,16 @@ html.reveal-on [data-rv].in{opacity:1;transform:none}
           <div><div class="lbl">Visit</div><div class="val">Mundi Centre, KG3 Avenue, Gikondo, Kigali<br>Izuba Boutique, Kigali Convention Centre</div></div>
         </div>
         <div class="row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="#d8bd7e"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.2-.6-1.5-.9-2-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.5 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3zM12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></div>
+          <!-- 784 117 761 is CONFIRMED WhatsApp: it is the only wa.me target in the client's own
+               original site, used four times. 783 417 205 was never a wa.me link anywhere, so it is
+               labelled as a phone line only until the client confirms. Do not promote it to WhatsApp
+               on assumption: see the Waterman build, where WhatsApp buttons pointed at a landline. -->
+          <div><div class="lbl">WhatsApp</div><div class="val"><a href="https://wa.me/250784117761?text=Hello%20Seven%20Summits%20Rwanda%2C" target="_blank" rel="noopener noreferrer">+250 784 117 761</a></div></div>
+        </div>
+        <div class="row">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#d8bd7e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.1z"/></svg></div>
-          <div><div class="lbl">Call or WhatsApp</div><div class="val">+250 784 117 761<br>+250 783 417 205</div></div>
+          <div><div class="lbl">Call</div><div class="val"><a href="tel:+250783417205">+250 783 417 205</a></div></div>
         </div>
         <div class="row">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#d8bd7e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></div>
