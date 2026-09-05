@@ -19,7 +19,7 @@
 <link rel="canonical" href="https://sevensummitsrwanda.com/">
 <!-- DEMO DEPLOY ONLY. Remove this noindex when the site moves to sevensummitsrwanda.com, or the real site will not rank. -->
 <meta name="robots" content="noindex">
-<meta name="bb-build" content="2026-08-30-c2">
+<meta name="bb-build" content="2026-08-30-c4">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231f3a2e'/%3E%3Cpath d='M8 74 L24 46 L38 60 L52 32 L66 52 L76 42 L84 54 L92 74' fill='none' stroke='%23c9a24b' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width:700px)">
 <link rel="preload" as="image" href="assets/hero.webp" media="(min-width:701px)">
@@ -140,7 +140,7 @@ html.rv nav .smark .top,html.rv nav .smark .bot{animation:hfade .8s var(--ease) 
 .why .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-gold);border:1px solid var(--line-gold)}
 .stat{background:var(--green);padding:36px 28px}
-.stat .num{font-family:var(--serif);font-size:3.4rem;color:var(--gold-soft);line-height:1}
+.stat .num{font-family:var(--serif);font-size:clamp(2.1rem,6.5vw,3.4rem);color:var(--gold-soft);line-height:1}
 .stat .lbl{margin-top:10px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-mute)}
 
 /* leaf walk: the one scrub scene */
@@ -374,9 +374,9 @@ footer .fnav a:hover{color:var(--gold-soft)}
 .socials a:hover{background:var(--gold);border-color:var(--gold)}
 .socials a svg{width:19px;height:19px;fill:#fff;transition:fill .3s}
 .socials a:hover svg{fill:var(--black)}
-footer .fword{margin:44px 0 6px;text-align:center}
+footer .fword{margin:44px 0 6px;text-align:center;overflow:hidden;max-width:100%}
 footer .fword .w{display:inline-block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em}
-footer .fword .wi{display:inline-block;font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,12.5vw,10.5rem);letter-spacing:.06em;line-height:1;color:rgba(243,236,224,.14);white-space:nowrap}
+footer .fword .wi{display:inline-block;font-family:var(--serif);font-weight:600;font-size:clamp(1.8rem,9vw,8.6rem);letter-spacing:.02em;line-height:1;color:rgba(243,236,224,.14);white-space:nowrap}
 html.reveal-on footer .fword .wi{opacity:1;transform:translateY(112%);transition:transform 1.2s var(--ease)}
 html.reveal-on footer .fword .wi.in{transform:none}
 footer .copy{margin-top:30px;font-size:11px;letter-spacing:.12em;color:#6f6c63;line-height:2}
@@ -408,6 +408,8 @@ html.reveal-on .wipe.in img.zoom{transform:none}
   section{padding:76px 0}
   .prod-grid{grid-template-columns:1fr}
   .gift{flex-direction:column;text-align:center}
+  .stat{padding:26px 18px}
+  .alt-num{font-size:clamp(4rem,19vw,6rem)}
   .gift .order{margin-inline:auto}
 }
 /* stage lighting: these scenes are lit by #stage, so they must be the last word on background */
