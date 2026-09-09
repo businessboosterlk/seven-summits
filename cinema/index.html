@@ -19,7 +19,7 @@
 <link rel="canonical" href="https://sevensummitsrwanda.com/">
 <!-- DEMO DEPLOY ONLY. Remove this noindex when the site moves to sevensummitsrwanda.com, or the real site will not rank. -->
 <meta name="robots" content="noindex">
-<meta name="bb-build" content="2026-08-30-c4">
+<meta name="bb-build" content="2026-09-09-c5">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231f3a2e'/%3E%3Cpath d='M8 74 L24 46 L38 60 L52 32 L66 52 L76 42 L84 54 L92 74' fill='none' stroke='%23c9a24b' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width:700px)">
 <link rel="preload" as="image" href="assets/hero.webp" media="(min-width:701px)">
@@ -35,7 +35,7 @@
   --line-gold:rgba(201,162,75,.22); --line-gold-2:rgba(201,162,75,.45);
   --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
   --ease:cubic-bezier(.16,1,.3,1); --t:.3s; --t-slow:.5s;
-  --maxw:1200px; --gutter:clamp(20px,5vw,40px);
+  --maxw:1400px; --gutter:clamp(20px,4.5vw,64px);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -135,6 +135,9 @@ html.rv nav .smark .top,html.rv nav .smark .bot{animation:hfade .8s var(--ease) 
 .alt-num span{font-size:.38em;color:var(--gold-soft);margin-left:.08em;font-style:italic}
 .alt-line{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.4vw,1.8rem);color:var(--text-mute)}
 
+@media(min-width:1200px){.card .img{height:340px}}
+@media(min-width:1600px){body{font-size:16.5px}.card .img{height:380px}.gvimg{height:360px}}
+
 /* origin */
 .why{background:var(--green)}
 .why .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
@@ -144,19 +147,39 @@ html.rv nav .smark .top,html.rv nav .smark .bot{animation:hfade .8s var(--ease) 
 .stat .lbl{margin-top:10px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-mute)}
 
 /* leaf walk: the one scrub scene */
-.walk{background:var(--green-deep);padding:130px 0;overflow:hidden}
-.walk-head{text-align:center;margin-bottom:40px}
-.walk-row{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:clamp(20px,5vw,56px);max-width:960px;margin:0 auto;padding:34px var(--gutter)}
+.walk{background:var(--green-deep);padding:130px 0 0;overflow:hidden}
+.walk-head{text-align:center;margin-bottom:10px}
+/* sticky product showcase: tall parent, sticky child, released entirely under 900px (fusion .ros pattern) */
+.walk-stage{display:grid;grid-template-columns:1fr 1fr;align-items:start}
+.walk-media{position:sticky;top:0;align-self:start;height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+.wm-frame{position:relative;width:min(74%,440px);aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.wm-img{position:absolute;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;opacity:0;transform:scale(.94);transition:opacity .75s var(--ease),transform 1s var(--ease);filter:drop-shadow(0 30px 46px rgba(0,0,0,.55))}
+.wm-img.on{opacity:1;transform:none}
+.wm-cap{text-align:center;margin-top:30px;min-height:52px}
+.wm-cap span{display:block;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.wm-cap b{display:block;margin-top:8px;font-family:var(--serif);font-weight:500;font-size:1.35rem;color:var(--cream)}
+.walk-rows{padding:6vh 0 14vh}
+.walk-row{min-height:76svh;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(24px,6vw,96px);max-width:48ch}
+.walk-thumb{display:none}
+.walk-price{margin-top:16px;color:var(--gold-soft);font-weight:500;letter-spacing:.05em;font-size:.98rem}
 .walk-word{font-family:var(--serif);font-style:italic;font-size:clamp(3.4rem,10.5vw,7.6rem);line-height:.98;color:var(--cream)}
 .walk-rule{height:1px;background:var(--gold);transform-origin:left;transform:scaleX(1);margin-top:10px}
-.walk-copy{color:var(--text-mute);font-size:1rem;max-width:34ch;line-height:1.7}
-.walk-copy b{display:block;color:var(--gold-soft);font-weight:500;letter-spacing:.06em;margin-top:8px;font-size:.92rem}
-.walk-order{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft);white-space:nowrap;transition:color var(--t);padding:14px 2px;position:relative}
+.walk-copy{color:var(--text-mute);font-size:1.06rem;max-width:38ch;line-height:1.75;margin-top:22px}
+.walk-order{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;margin-top:26px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--black);background:var(--gold);white-space:nowrap;transition:background var(--t),gap var(--t);padding:15px 26px;position:relative;overflow:hidden}
+.walk-order svg{width:16px;height:16px}
+.walk-order:hover{background:var(--gold-soft);gap:15px}
 .walk-order::after{content:"";position:absolute;left:2px;right:2px;bottom:10px;height:1px;background:var(--line-gold-2)}
 .walk-order:hover{color:var(--gold)}
 html.rv .walk-row{opacity:calc(.24 + var(--p,1)*.76)}
 html.rv .walk-rule{transform:scaleX(var(--p,1))}
-@media(max-width:760px){.walk-row{grid-template-columns:1fr;gap:10px;padding:26px var(--gutter)}.walk-order{justify-self:start}}
+@media(max-width:900px){
+  .walk-stage{grid-template-columns:1fr}
+  .walk-media{display:none}
+  .walk-rows{padding:0 0 30px}
+  .walk-row{min-height:0;padding:30px var(--gutter);max-width:none}
+  .walk-thumb{display:flex;align-items:center;justify-content:center;height:210px;margin-bottom:14px;background:radial-gradient(circle at 50% 45%,rgba(201,162,75,.13),transparent 70%)}
+  .walk-thumb img{height:88%;width:auto;object-fit:contain;filter:drop-shadow(0 16px 24px rgba(0,0,0,.5))}
+}
 
 /* collection */
 .products{background:var(--green)}
@@ -192,6 +215,27 @@ html.rv .walk-rule{transform:scaleX(var(--p,1))}
 .carousel .dot{width:14px;height:14px;border-radius:50%;border:1px solid var(--gold);background:transparent;padding:0;transition:background .3s;position:relative}
 .carousel .dot::after{content:"";position:absolute;inset:-15px}
 .carousel .dot.active{background:var(--gold)}
+.lbtile{display:block;width:100%;height:100%;padding:0;background:none;border:0;cursor:zoom-in}
+.card .img .lbtile,.gift .ph .lbtile{display:flex;align-items:center;justify-content:center}
+.c-zoom{position:absolute;top:10px;right:62px;z-index:4;width:44px;height:44px;border-radius:50%;background:rgba(21,39,31,.78);border:1px solid rgba(201,162,75,.35);display:flex;align-items:center;justify-content:center;color:var(--gold-soft);transition:background .2s;cursor:pointer}
+.c-zoom:hover{background:rgba(201,162,75,.22)}
+.c-zoom svg{width:15px;height:15px}
+.sprog{position:fixed;top:0;left:0;right:0;height:2px;z-index:210;pointer-events:none}
+.sprog i{display:block;height:100%;width:0;background:var(--gold);transition:width .1s linear}
+/* lightbox, from ~/bb-web-snippets/gallery-lightbox.html */
+.bb-lb{position:fixed;inset:0;z-index:300;display:none;background:rgba(10,14,11,.95);align-items:center;justify-content:center;padding:clamp(12px,4vw,56px)}
+.bb-lb[open]{display:flex}
+.bb-lb figure{margin:0;max-width:100%;max-height:100%;display:flex;flex-direction:column;align-items:center;gap:14px}
+.bb-lb img{max-width:100%;max-height:74svh;object-fit:contain;animation:lbin .3s var(--ease)}
+@keyframes lbin{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:none}}
+.bb-lb figcaption{font-family:var(--serif);font-size:1.25rem;color:var(--cream);text-align:center;max-width:52ch}
+.bb-lb .count{font-size:11px;letter-spacing:.18em;color:var(--text-mute);font-variant-numeric:tabular-nums}
+.bb-lb .x,.bb-lb .nav{position:absolute;background:rgba(243,236,224,.10);border:1px solid rgba(243,236,224,.22);color:var(--cream);border-radius:50%;width:48px;height:48px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:22px;line-height:1;transition:background .2s}
+.bb-lb .x:hover,.bb-lb .nav:hover{background:rgba(201,162,75,.3)}
+.bb-lb .x{top:clamp(12px,3vw,28px);right:clamp(12px,3vw,28px)}
+.bb-lb .prev{left:clamp(10px,2.5vw,26px)}
+.bb-lb .next{right:clamp(10px,2.5vw,26px)}
+@media(max-width:600px){.bb-lb .nav{bottom:16px;top:auto}.bb-lb .prev{left:26%}.bb-lb .next{right:26%}}
 .c-pause{position:absolute;top:10px;right:10px;z-index:4;width:44px;height:44px;border-radius:50%;background:rgba(21,39,31,.78);border:1px solid rgba(201,162,75,.35);display:flex;align-items:center;justify-content:center;transition:background .2s}
 .c-pause:hover{background:rgba(201,162,75,.22)}
 .c-pause svg{width:11px;height:11px;fill:var(--gold-soft)}
@@ -336,6 +380,7 @@ html.rv .walk-rule{transform:scaleX(var(--p,1))}
 .shop a:hover{color:var(--gold)}
 
 .faqs .faqlist{max-width:820px;margin-top:44px}
+@media(min-width:1000px){.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,6vw,96px);align-items:start}.faqs .faqlist{margin-top:0;max-width:none}.faq-head{position:sticky;top:110px}}
 .faqs details{border-bottom:1px solid var(--cream-deep)}
 .faqs details:first-child{border-top:1px solid var(--cream-deep)}
 .faqs summary{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 2px;cursor:pointer;list-style:none;font-family:var(--serif);font-size:1.35rem;color:var(--ink)}
@@ -439,6 +484,13 @@ html.reveal-on .wipe.in img.zoom{transform:none}
 <a class="skip" href="#why">Skip to content</a>
 <div class="stage" id="stage" aria-hidden="true"></div>
 <div class="grain" aria-hidden="true"></div>
+<div class="sprog" aria-hidden="true"><i id="sprogFill"></i></div>
+<div class="bb-lb" id="lb" role="dialog" aria-modal="true" aria-label="Product viewer">
+  <button class="x" id="lbX" type="button" aria-label="Close viewer">&times;</button>
+  <button class="nav prev" id="lbP" type="button" aria-label="Previous image">&#8249;</button>
+  <button class="nav next" id="lbN" type="button" aria-label="Next image">&#8250;</button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption><span class="count" id="lbCount"></span></figure>
+</div>
 
 <nav id="nav">
   <a href="#top" class="smark" aria-label="Seven Summits Rwanda, back to top">
@@ -514,20 +566,38 @@ html.reveal-on .wipe.in img.zoom{transform:none}
     <div class="eyebrow" data-rv>Three Leaves</div>
     <h2 class="section-title" data-rv style="max-width:none;transition-delay:.08s">One hill. Three teas.</h2>
   </div>
-  <div class="walk-row" data-walk>
-    <div><div class="walk-word">Black</div><div class="walk-rule"></div></div>
-    <p class="walk-copy">Full and bright, the everyday cup done properly. Hand crafted from a single estate.<b>7,500 RWF · 125g</b></p>
-    <a class="walk-order" href="https://wa.me/250784117761?text=Hello%20Seven%20Summits%20Rwanda%2C%20I%20would%20like%20to%20order%20the%20Rwanda%20Orthodox%20Black%20Tea%20(125g%20white%20tin%2C%207%2C500%20RWF)." target="_blank" rel="noopener noreferrer">Order</a>
-  </div>
-  <div class="walk-row" data-walk>
-    <div><div class="walk-word">Green</div><div class="walk-rule"></div></div>
-    <p class="walk-copy">Two leaves and a bud, dried gently. Clean, fresh and Eco Cert certified.<b>9,000 RWF · 125g</b></p>
-    <a class="walk-order" href="https://wa.me/250784117761?text=Hello%20Seven%20Summits%20Rwanda%2C%20I%20would%20like%20to%20order%20the%20Rwanda%20Orthodox%20Green%20Tea%20(125g%2C%209%2C000%20RWF)." target="_blank" rel="noopener noreferrer">Order</a>
-  </div>
-  <div class="walk-row" data-walk>
-    <div><div class="walk-word">White</div><div class="walk-rule"></div></div>
-    <p class="walk-copy">Rwanda's rarest leaf, sealed inside a hand finished ceramic elephant.<b>From 48,500 RWF · 125g, three editions</b></p>
-    <a class="walk-order" href="https://wa.me/250784117761?text=Hello%20Seven%20Summits%20Rwanda%2C%20I%20would%20like%20to%20order%20the%20White%20Tea%20in%20Ceramic%20Elephant%20(from%2048%2C500%20RWF).%20Which%20editions%20do%20you%20have%20in%20stock%3F" target="_blank" rel="noopener noreferrer">Order</a>
+  <div class="walk-stage">
+    <div class="walk-media" aria-hidden="true">
+      <div class="wm-frame">
+        <img class="wm-img on" data-tea="black" src="assets/black-tea.webp" alt="" width="900" height="600">
+        <img class="wm-img" data-tea="green" src="assets/green-tea.webp" alt="" width="900" height="600">
+        <img class="wm-img" data-tea="white" src="assets/elephant-gold.webp" alt="" width="900" height="612">
+      </div>
+      <div class="wm-cap"><span>In the tin</span><b id="wmName">Rwanda Orthodox Black Tea</b></div>
+    </div>
+    <div class="walk-rows">
+      <article class="walk-row" data-walk data-tea="black">
+        <div class="walk-thumb"><img src="assets/black-tea.webp" alt="Rwanda Orthodox Black Tea in its white tin" loading="lazy" width="900" height="600"></div>
+        <div class="walk-word">Black</div><div class="walk-rule"></div>
+        <p class="walk-copy">Full and bright, the everyday cup done properly. Hand crafted from a single estate.</p>
+        <div class="walk-price">7,500 RWF &middot; 125g</div>
+        <a class="walk-order" href="https://wa.me/250784117761?text=Hello%20Seven%20Summits%20Rwanda%2C%20I%20would%20like%20to%20order%20the%20Rwanda%20Orthodox%20Black%20Tea%20(125g%20white%20tin%2C%207%2C500%20RWF)." target="_blank" rel="noopener noreferrer">Order this tin<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="walk-row" data-walk data-tea="green">
+        <div class="walk-thumb"><img src="assets/green-tea.webp" alt="Rwanda Orthodox Green Tea tin" loading="lazy" width="900" height="600"></div>
+        <div class="walk-word">Green</div><div class="walk-rule"></div>
+        <p class="walk-copy">Two leaves and a bud, dried gently. Clean, fresh and Eco Cert certified.</p>
+        <div class="walk-price">9,000 RWF &middot; 125g</div>
+        <a class="walk-order" href="https://wa.me/250784117761?text=Hello%20Seven%20Summits%20Rwanda%2C%20I%20would%20like%20to%20order%20the%20Rwanda%20Orthodox%20Green%20Tea%20(125g%2C%209%2C000%20RWF)." target="_blank" rel="noopener noreferrer">Order this tin<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="walk-row" data-walk data-tea="white">
+        <div class="walk-thumb"><img src="assets/elephant-gold.webp" alt="White tea in a gold ceramic elephant" loading="lazy" width="900" height="612"></div>
+        <div class="walk-word">White</div><div class="walk-rule"></div>
+        <p class="walk-copy">Rwanda's rarest leaf, sealed inside a hand finished ceramic elephant.</p>
+        <div class="walk-price">From 48,500 RWF &middot; 125g, three editions</div>
+        <a class="walk-order" href="https://wa.me/250784117761?text=Hello%20Seven%20Summits%20Rwanda%2C%20I%20would%20like%20to%20order%20the%20White%20Tea%20in%20Ceramic%20Elephant%20(from%2048%2C500%20RWF).%20Which%20editions%20do%20you%20have%20in%20stock%3F" target="_blank" rel="noopener noreferrer">Ask about editions<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -540,7 +610,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
     <div class="prod-grid">
 
       <div class="card wipe" data-rv>
-        <div class="img"><img src="assets/black-tea.webp" alt="Rwanda Orthodox Black Tea in its white tin" loading="lazy" width="900" height="600"></div>
+        <div class="img"><button class="lbtile" type="button" data-full="assets/black-tea.webp" data-cap="Rwanda Orthodox Black Tea, 125g" aria-label="View Rwanda Orthodox Black Tea, 125g larger"><img src="assets/black-tea.webp" alt="Rwanda Orthodox Black Tea in its white tin" loading="lazy" width="900" height="600"></button></div>
         <div class="body">
           <div class="kicker">Orthodox . Loose Leaf</div>
           <h3>Rwanda Orthodox Black Tea</h3>
@@ -554,7 +624,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
       </div>
 
       <div class="card wipe" data-rv style="transition-delay:.08s">
-        <div class="img"><img src="assets/green-tea.webp" alt="Rwanda Orthodox Green Tea tin" loading="lazy" width="900" height="600"></div>
+        <div class="img"><button class="lbtile" type="button" data-full="assets/green-tea.webp" data-cap="Rwanda Orthodox Green Tea, 125g" aria-label="View Rwanda Orthodox Green Tea, 125g larger"><img src="assets/green-tea.webp" alt="Rwanda Orthodox Green Tea tin" loading="lazy" width="900" height="600"></button></div>
         <div class="body">
           <div class="kicker">Organic . Loose Leaf</div>
           <h3>Rwanda Orthodox Green Tea</h3>
@@ -568,7 +638,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
       </div>
 
       <div class="card wipe" data-rv style="transition-delay:.16s">
-        <div class="img"><img src="assets/arabica-tin.webp" alt="Premium Rwanda Arabica whole bean coffee tin" loading="lazy" width="601" height="900"></div>
+        <div class="img"><button class="lbtile" type="button" data-full="assets/arabica-tin.webp" data-cap="Premium Rwanda Arabica, 250g whole bean tin" aria-label="View Premium Rwanda Arabica, 250g whole bean tin larger"><img src="assets/arabica-tin.webp" alt="Premium Rwanda Arabica whole bean coffee tin" loading="lazy" width="601" height="900"></button></div>
         <div class="body">
           <div class="kicker">100% Arabica . Medium Roast</div>
           <h3>Premium Rwanda Arabica</h3>
@@ -581,7 +651,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
       </div>
 
       <div class="card wipe" data-rv>
-        <div class="img"><img src="assets/arabica-ground.webp" alt="Rwanda Arabica ground coffee pouch" loading="lazy" width="627" height="900"></div>
+        <div class="img"><button class="lbtile" type="button" data-full="assets/arabica-ground.webp" data-cap="Ground Arabica, 500g pouch" aria-label="View Ground Arabica, 500g pouch larger"><img src="assets/arabica-ground.webp" alt="Rwanda Arabica ground coffee pouch" loading="lazy" width="627" height="900"></button></div>
         <div class="body">
           <div class="kicker">Ground . Medium Roast</div>
           <h3>Ground Arabica</h3>
@@ -598,6 +668,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
           <div class="slide active"><img src="assets/elephant-red.webp" alt="Ceramic Elephant, Red edition" loading="lazy" width="900" height="711"></div>
           <div class="slide"><img src="assets/elephant-green.webp" alt="Ceramic Elephant, Green edition" loading="lazy" width="815" height="900"></div>
           <div class="slide"><img src="assets/elephant-gold.webp" alt="Ceramic Elephant, Gold edition" loading="lazy" width="900" height="612"></div>
+          <button class="lbtile c-zoom" type="button" data-from=".carousel .slide.active img" data-cap="White Tea in a Ceramic Elephant" aria-label="View the ceramic elephant larger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M9 3H3v6M15 21h6v-6M21 9V3h-6M3 15v6h6"/></svg></button>
           <button class="c-pause" aria-label="Pause slideshow"><svg viewBox="0 0 10 12" aria-hidden="true"><rect x="0" y="0" width="3" height="12" rx="1"/><rect x="5" y="0" width="3" height="12" rx="1"/></svg></button>
           <div class="dots">
             <button class="dot active" data-slide="0" aria-label="Show Red edition"></button>
@@ -618,7 +689,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
       </div>
 
       <div class="card wipe" data-rv style="transition-delay:.16s">
-        <div class="img"><img src="assets/agasake.webp" alt="Agasake basket with green tea" loading="lazy" width="900" height="600"></div>
+        <div class="img"><button class="lbtile" type="button" data-full="assets/agasake.webp" data-cap="Agasake Basket with Green Tea" aria-label="View Agasake Basket with Green Tea larger"><img src="assets/agasake.webp" alt="Agasake basket with green tea" loading="lazy" width="900" height="600"></button></div>
         <div class="body">
           <div class="kicker">Handmade . Gift</div>
           <h3>Agasake Basket with Green Tea</h3>
@@ -735,7 +806,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
     <h2 class="section-title" data-rv style="transition-delay:.08s">Rwanda's finest, beautifully presented.</h2>
     <div class="grid">
       <div class="gift wipe" data-rv>
-        <div class="ph"><img src="assets/elephant-gift.webp" alt="Ceramic Elephant with white tea" loading="lazy" width="900" height="711"></div>
+        <div class="ph"><button class="lbtile" type="button" data-full="assets/elephant-gift.webp" data-cap="Ceramic Elephant with White Tea" aria-label="View Ceramic Elephant with White Tea larger"><img src="assets/elephant-gift.webp" alt="Ceramic Elephant with white tea" loading="lazy" width="900" height="711"></button></div>
         <div>
           <div class="kicker">Exclusive Keepsake</div>
           <h3>Ceramic Elephant with White Tea</h3>
@@ -745,7 +816,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
         </div>
       </div>
       <div class="gift wipe" data-rv style="transition-delay:.1s">
-        <div class="ph"><img src="assets/agasake-gift.webp" alt="Agasake gift basket" loading="lazy" width="600" height="914"></div>
+        <div class="ph"><button class="lbtile" type="button" data-full="assets/agasake-gift.webp" data-cap="The Agasake Basket" aria-label="View The Agasake Basket larger"><img src="assets/agasake-gift.webp" alt="Agasake gift basket" loading="lazy" width="600" height="914"></button></div>
         <div>
           <div class="kicker">Cultural Gift</div>
           <h3>The Agasake Basket</h3>
@@ -836,9 +907,11 @@ html.reveal-on .wipe.in img.zoom{transform:none}
 </section>
 
 <section class="faqs light" id="faq">
-  <div class="wrap">
-    <div class="eyebrow" data-rv>Ordering, Answered</div>
-    <h2 class="section-title" data-rv style="transition-delay:.08s">How ordering works.</h2>
+  <div class="wrap faq-grid">
+    <div class="faq-head">
+      <div class="eyebrow" data-rv>Ordering, Answered</div>
+      <h2 class="section-title" data-rv style="transition-delay:.08s">How ordering works.</h2>
+    </div>
     <div class="faqlist" data-rv style="transition-delay:.14s">
       <details><summary>How does an order begin?<span class="fmark" aria-hidden="true"></span></summary><p>Every Order button opens WhatsApp with your order already written out. You read it, you press send and we take it from there. Nothing is sent until you press send.</p></details>
       <details><summary>Where can I see the products in person?<span class="fmark" aria-hidden="true"></span></summary><p>At Mundi Centre on KG3 Avenue in Gikondo and at Izuba Boutique inside the Kigali Convention Centre.</p></details>
@@ -953,11 +1026,34 @@ function lightStage(){
   lit.forEach(function(sec){var r=sec.getBoundingClientRect();if(r.top<=mid&&r.bottom>mid)pick=sec;});
   if(pick)stage.style.background=pick.getAttribute('data-bg');
 }
+/* sticky showcase: the tin follows whichever row sits nearest the middle of the screen */
+var wmImgs=document.querySelectorAll('.wm-img'),wmName=document.getElementById('wmName'),
+    wmRows=document.querySelectorAll('.walk-row[data-tea]'),wmCur='black';
+var TEA={black:'Rwanda Orthodox Black Tea',green:'Rwanda Orthodox Green Tea',white:'White Tea in a Ceramic Elephant'};
+function wmSync(){
+  if(!wmRows.length||!wmImgs.length)return;
+  var mid=innerHeight*0.5,best=null,bd=1e9;
+  wmRows.forEach(function(r){var b=r.getBoundingClientRect();var d=Math.abs(b.top+b.height/2-mid);if(d<bd){bd=d;best=r;}});
+  if(!best)return;
+  var t=best.getAttribute('data-tea');
+  if(t===wmCur)return;
+  wmCur=t;
+  wmImgs.forEach(function(im){im.classList.toggle('on',im.getAttribute('data-tea')===t);});
+  if(wmName)wmName.textContent=TEA[t]||'';
+}
+var sprogFill=document.getElementById('sprogFill');
+function progSync(){
+  if(!sprogFill)return;
+  var h=document.documentElement.scrollHeight-innerHeight;
+  sprogFill.style.width=(h>0?Math.min(1,scrollY/h)*100:0).toFixed(2)+'%';
+}
 function onScroll(){
   nav.classList.toggle('scrolled',scrollY>40);
   if(mbar)mbar.classList.toggle('show',scrollY>innerHeight*0.6);
   showReveals();
   lightStage();
+  progSync();
+  wmSync();
   if(document.documentElement.classList.contains('rv')){scrubWalk();parallax();scrubAlt();}
 }
 addEventListener('scroll',onScroll,{passive:true});
@@ -1226,6 +1322,57 @@ document.getElementById('sendEm').addEventListener('click',function(){
   }
   addEventListener('scroll',run,{passive:true});
   run();
+})();
+
+/* product lightbox, copied from ~/bb-web-snippets/gallery-lightbox.html */
+(function(){
+  var lb=document.getElementById('lb');if(!lb)return;
+  var img=document.getElementById('lbImg'),cap=document.getElementById('lbCap'),
+      cnt=document.getElementById('lbCount'),tiles=[],idx=0,opener=null;
+  function collect(){tiles=Array.prototype.slice.call(document.querySelectorAll('.lbtile'));}
+  function srcOf(t){
+    var sel=t.getAttribute('data-from');
+    if(sel){var live=document.querySelector(sel);if(live)return [live.currentSrc||live.src,t.getAttribute('data-cap')||live.alt||''];}
+    var inner=t.querySelector('img');
+    return [t.getAttribute('data-full')||(inner?inner.currentSrc||inner.src:''),t.getAttribute('data-cap')||(inner?inner.alt:'')||''];
+  }
+  function show(i){
+    if(!tiles.length)return;
+    idx=(i+tiles.length)%tiles.length;
+    var pair=srcOf(tiles[idx]);
+    img.src=pair[0];img.alt=pair[1];cap.textContent=pair[1];
+    cnt.textContent=(idx+1)+' of '+tiles.length;
+  }
+  function open(i,from){collect();opener=from||null;lb.setAttribute('open','');show(i);
+    document.body.style.overflow='hidden';document.getElementById('lbX').focus();}
+  function close(){lb.removeAttribute('open');document.body.style.overflow='';img.src='';
+    if(opener){opener.focus();opener=null;}}
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('.lbtile');
+    if(t){collect();open(tiles.indexOf(t),t);return;}
+    if(e.target.id==='lbX'){close();return;}
+    if(e.target.id==='lbP'){show(idx-1);return;}
+    if(e.target.id==='lbN'){show(idx+1);return;}
+    if(e.target===lb)close();
+  });
+  document.addEventListener('keydown',function(e){
+    if(!lb.hasAttribute('open'))return;
+    if(e.key==='Escape')close();
+    else if(e.key==='ArrowLeft')show(idx-1);
+    else if(e.key==='ArrowRight')show(idx+1);
+    else if(e.key==='Tab'){
+      var f=lb.querySelectorAll('button'),first=f[0],last=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  });
+  var x0=null;
+  lb.addEventListener('touchstart',function(e){x0=e.changedTouches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){
+    if(x0===null)return;var d=e.changedTouches[0].clientX-x0;
+    if(Math.abs(d)>45)show(idx+(d<0?1:-1));
+    x0=null;
+  },{passive:true});
 })();
 
 /* cinnamon notify */
