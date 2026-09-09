@@ -19,7 +19,7 @@
 <link rel="canonical" href="https://sevensummitsrwanda.com/">
 <!-- DEMO DEPLOY ONLY. Remove this noindex when the site moves to sevensummitsrwanda.com, or the real site will not rank. -->
 <meta name="robots" content="noindex">
-<meta name="bb-build" content="2026-09-09-c5">
+<meta name="bb-build" content="2026-09-09-c7">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231f3a2e'/%3E%3Cpath d='M8 74 L24 46 L38 60 L52 32 L66 52 L76 42 L84 54 L92 74' fill='none' stroke='%23c9a24b' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width:700px)">
 <link rel="preload" as="image" href="assets/hero.webp" media="(min-width:701px)">
@@ -152,8 +152,8 @@ html.rv nav .smark .top,html.rv nav .smark .bot{animation:hfade .8s var(--ease) 
 /* sticky product showcase: tall parent, sticky child, released entirely under 900px (fusion .ros pattern) */
 .walk-stage{display:grid;grid-template-columns:1fr 1fr;align-items:start}
 .walk-media{position:sticky;top:0;align-self:start;height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
-.wm-frame{position:relative;width:min(74%,440px);aspect-ratio:1;display:flex;align-items:center;justify-content:center}
-.wm-img{position:absolute;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;opacity:0;transform:scale(.94);transition:opacity .75s var(--ease),transform 1s var(--ease);filter:drop-shadow(0 30px 46px rgba(0,0,0,.55))}
+.wm-frame{position:relative;width:100%;height:min(66svh,640px);display:flex;align-items:center;justify-content:center}
+.wm-img{position:absolute;max-width:72%;max-height:100%;width:auto;height:auto;object-fit:contain;opacity:0;transform:scale(.94);transition:opacity .75s var(--ease),transform 1s var(--ease);filter:drop-shadow(0 30px 46px rgba(0,0,0,.55))}
 .wm-img.on{opacity:1;transform:none}
 .wm-cap{text-align:center;margin-top:30px;min-height:52px}
 .wm-cap span{display:block;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
@@ -569,29 +569,29 @@ html.reveal-on .wipe.in img.zoom{transform:none}
   <div class="walk-stage">
     <div class="walk-media" aria-hidden="true">
       <div class="wm-frame">
-        <img class="wm-img on" data-tea="black" src="assets/black-tea.webp" alt="" width="900" height="600">
-        <img class="wm-img" data-tea="green" src="assets/green-tea.webp" alt="" width="900" height="600">
-        <img class="wm-img" data-tea="white" src="assets/elephant-gold.webp" alt="" width="900" height="612">
+        <img class="wm-img on" data-tea="black" src="assets/black-tea-t.webp" alt="" width="341" height="572">
+        <img class="wm-img" data-tea="green" src="assets/green-tea-t.webp" alt="" width="361" height="585">
+        <img class="wm-img" data-tea="white" src="assets/elephant-gold-t.webp" alt="" width="565" height="535">
       </div>
       <div class="wm-cap"><span>In the tin</span><b id="wmName">Rwanda Orthodox Black Tea</b></div>
     </div>
     <div class="walk-rows">
       <article class="walk-row" data-walk data-tea="black">
-        <div class="walk-thumb"><img src="assets/black-tea.webp" alt="Rwanda Orthodox Black Tea in its white tin" loading="lazy" width="900" height="600"></div>
+        <div class="walk-thumb"><img src="assets/black-tea-t.webp" alt="Rwanda Orthodox Black Tea in its white tin" loading="lazy" width="341" height="572"></div>
         <div class="walk-word">Black</div><div class="walk-rule"></div>
         <p class="walk-copy">Full and bright, the everyday cup done properly. Hand crafted from a single estate.</p>
         <div class="walk-price">7,500 RWF &middot; 125g</div>
         <a class="walk-order" href="https://wa.me/250784117761?text=Hello%20Seven%20Summits%20Rwanda%2C%20I%20would%20like%20to%20order%20the%20Rwanda%20Orthodox%20Black%20Tea%20(125g%20white%20tin%2C%207%2C500%20RWF)." target="_blank" rel="noopener noreferrer">Order this tin<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="walk-row" data-walk data-tea="green">
-        <div class="walk-thumb"><img src="assets/green-tea.webp" alt="Rwanda Orthodox Green Tea tin" loading="lazy" width="900" height="600"></div>
+        <div class="walk-thumb"><img src="assets/green-tea-t.webp" alt="Rwanda Orthodox Green Tea tin" loading="lazy" width="361" height="585"></div>
         <div class="walk-word">Green</div><div class="walk-rule"></div>
         <p class="walk-copy">Two leaves and a bud, dried gently. Clean, fresh and Eco Cert certified.</p>
         <div class="walk-price">9,000 RWF &middot; 125g</div>
         <a class="walk-order" href="https://wa.me/250784117761?text=Hello%20Seven%20Summits%20Rwanda%2C%20I%20would%20like%20to%20order%20the%20Rwanda%20Orthodox%20Green%20Tea%20(125g%2C%209%2C000%20RWF)." target="_blank" rel="noopener noreferrer">Order this tin<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </article>
       <article class="walk-row" data-walk data-tea="white">
-        <div class="walk-thumb"><img src="assets/elephant-gold.webp" alt="White tea in a gold ceramic elephant" loading="lazy" width="900" height="612"></div>
+        <div class="walk-thumb"><img src="assets/elephant-gold-t.webp" alt="White tea in a gold ceramic elephant" loading="lazy" width="565" height="535"></div>
         <div class="walk-word">White</div><div class="walk-rule"></div>
         <p class="walk-copy">Rwanda's rarest leaf, sealed inside a hand finished ceramic elephant.</p>
         <div class="walk-price">From 48,500 RWF &middot; 125g, three editions</div>
@@ -610,7 +610,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
     <div class="prod-grid">
 
       <div class="card wipe" data-rv>
-        <div class="img"><button class="lbtile" type="button" data-full="assets/black-tea.webp" data-cap="Rwanda Orthodox Black Tea, 125g" aria-label="View Rwanda Orthodox Black Tea, 125g larger"><img src="assets/black-tea.webp" alt="Rwanda Orthodox Black Tea in its white tin" loading="lazy" width="900" height="600"></button></div>
+        <div class="img"><button class="lbtile" type="button" data-full="assets/black-tea-t.webp" data-cap="Rwanda Orthodox Black Tea, 125g" aria-label="View Rwanda Orthodox Black Tea, 125g larger"><img src="assets/black-tea-t.webp" alt="Rwanda Orthodox Black Tea in its white tin" loading="lazy" width="341" height="572"></button></div>
         <div class="body">
           <div class="kicker">Orthodox . Loose Leaf</div>
           <h3>Rwanda Orthodox Black Tea</h3>
@@ -624,7 +624,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
       </div>
 
       <div class="card wipe" data-rv style="transition-delay:.08s">
-        <div class="img"><button class="lbtile" type="button" data-full="assets/green-tea.webp" data-cap="Rwanda Orthodox Green Tea, 125g" aria-label="View Rwanda Orthodox Green Tea, 125g larger"><img src="assets/green-tea.webp" alt="Rwanda Orthodox Green Tea tin" loading="lazy" width="900" height="600"></button></div>
+        <div class="img"><button class="lbtile" type="button" data-full="assets/green-tea-t.webp" data-cap="Rwanda Orthodox Green Tea, 125g" aria-label="View Rwanda Orthodox Green Tea, 125g larger"><img src="assets/green-tea-t.webp" alt="Rwanda Orthodox Green Tea tin" loading="lazy" width="361" height="585"></button></div>
         <div class="body">
           <div class="kicker">Organic . Loose Leaf</div>
           <h3>Rwanda Orthodox Green Tea</h3>
@@ -638,7 +638,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
       </div>
 
       <div class="card wipe" data-rv style="transition-delay:.16s">
-        <div class="img"><button class="lbtile" type="button" data-full="assets/arabica-tin.webp" data-cap="Premium Rwanda Arabica, 250g whole bean tin" aria-label="View Premium Rwanda Arabica, 250g whole bean tin larger"><img src="assets/arabica-tin.webp" alt="Premium Rwanda Arabica whole bean coffee tin" loading="lazy" width="601" height="900"></button></div>
+        <div class="img"><button class="lbtile" type="button" data-full="assets/arabica-tin-t.webp" data-cap="Premium Rwanda Arabica, 250g whole bean tin" aria-label="View Premium Rwanda Arabica, 250g whole bean tin larger"><img src="assets/arabica-tin-t.webp" alt="Premium Rwanda Arabica whole bean coffee tin" loading="lazy" width="442" height="802"></button></div>
         <div class="body">
           <div class="kicker">100% Arabica . Medium Roast</div>
           <h3>Premium Rwanda Arabica</h3>
@@ -651,7 +651,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
       </div>
 
       <div class="card wipe" data-rv>
-        <div class="img"><button class="lbtile" type="button" data-full="assets/arabica-ground.webp" data-cap="Ground Arabica, 500g pouch" aria-label="View Ground Arabica, 500g pouch larger"><img src="assets/arabica-ground.webp" alt="Rwanda Arabica ground coffee pouch" loading="lazy" width="627" height="900"></button></div>
+        <div class="img"><button class="lbtile" type="button" data-full="assets/arabica-ground-t.webp" data-cap="Ground Arabica, 500g pouch" aria-label="View Ground Arabica, 500g pouch larger"><img src="assets/arabica-ground-t.webp" alt="Rwanda Arabica ground coffee pouch" loading="lazy" width="488" height="895"></button></div>
         <div class="body">
           <div class="kicker">Ground . Medium Roast</div>
           <h3>Ground Arabica</h3>
@@ -665,9 +665,9 @@ html.reveal-on .wipe.in img.zoom{transform:none}
 
       <div class="card star wipe" data-rv style="transition-delay:.08s">
         <div class="img carousel" data-carousel>
-          <div class="slide active"><img src="assets/elephant-red.webp" alt="Ceramic Elephant, Red edition" loading="lazy" width="900" height="711"></div>
-          <div class="slide"><img src="assets/elephant-green.webp" alt="Ceramic Elephant, Green edition" loading="lazy" width="815" height="900"></div>
-          <div class="slide"><img src="assets/elephant-gold.webp" alt="Ceramic Elephant, Gold edition" loading="lazy" width="900" height="612"></div>
+          <div class="slide active"><img src="assets/elephant-red-t.webp" alt="Ceramic Elephant, Red edition" loading="lazy" width="660" height="645"></div>
+          <div class="slide"><img src="assets/elephant-green-t.webp" alt="Ceramic Elephant, Green edition" loading="lazy" width="703" height="718"></div>
+          <div class="slide"><img src="assets/elephant-gold-t.webp" alt="Ceramic Elephant, Gold edition" loading="lazy" width="565" height="535"></div>
           <button class="lbtile c-zoom" type="button" data-from=".carousel .slide.active img" data-cap="White Tea in a Ceramic Elephant" aria-label="View the ceramic elephant larger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M9 3H3v6M15 21h6v-6M21 9V3h-6M3 15v6h6"/></svg></button>
           <button class="c-pause" aria-label="Pause slideshow"><svg viewBox="0 0 10 12" aria-hidden="true"><rect x="0" y="0" width="3" height="12" rx="1"/><rect x="5" y="0" width="3" height="12" rx="1"/></svg></button>
           <div class="dots">
@@ -689,7 +689,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
       </div>
 
       <div class="card wipe" data-rv style="transition-delay:.16s">
-        <div class="img"><button class="lbtile" type="button" data-full="assets/agasake.webp" data-cap="Agasake Basket with Green Tea" aria-label="View Agasake Basket with Green Tea larger"><img src="assets/agasake.webp" alt="Agasake basket with green tea" loading="lazy" width="900" height="600"></button></div>
+        <div class="img"><button class="lbtile" type="button" data-full="assets/agasake-t.webp" data-cap="Agasake Basket with Green Tea" aria-label="View Agasake Basket with Green Tea larger"><img src="assets/agasake-t.webp" alt="Agasake basket with green tea" loading="lazy" width="327" height="565"></button></div>
         <div class="body">
           <div class="kicker">Handmade . Gift</div>
           <h3>Agasake Basket with Green Tea</h3>
@@ -726,7 +726,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
     </div>
     <div class="pq presult" id="presult">
       <div class="match-kicker">Your match</div>
-      <div class="ph"><img id="rImg" src="assets/black-tea.webp" alt="" width="900" height="600"></div>
+      <div class="ph"><img id="rImg" src="assets/black-tea-t.webp" alt="" width="341" height="572"></div>
       <h3 id="rName">Rwanda Orthodox Black Tea</h3>
       <p class="why-line" id="rWhy"></p>
       <div class="pprice" id="rPrice"></div>
@@ -755,7 +755,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
       <h2 class="section-title" data-rv style="transition-delay:.08s">Gifts your clients keep.</h2>
       <p class="lead" data-rv style="transition-delay:.14s">A gift made in Rwanda says more than another branded diary. Tell us the quantity, the occasion and the deadline, and we will come back with a quote the same day.</p>
       <div class="gvis wipe" data-rv style="transition-delay:.2s">
-        <div class="gvimg"><img id="gvImg" src="assets/elephant-gold.webp" alt="Ceramic Elephant, Gold edition" loading="lazy" width="900" height="612"></div>
+        <div class="gvimg"><img id="gvImg" src="assets/elephant-gold-t.webp" alt="Ceramic Elephant, Gold edition" loading="lazy" width="565" height="535"></div>
         <div class="gvcap">
           <div><span class="k">Selected gift</span><h3 id="gvName">Gold Elephant with White Tea</h3></div>
           <div class="p" id="gvPrice">72,500 RWF each</div>
@@ -806,7 +806,7 @@ html.reveal-on .wipe.in img.zoom{transform:none}
     <h2 class="section-title" data-rv style="transition-delay:.08s">Rwanda's finest, beautifully presented.</h2>
     <div class="grid">
       <div class="gift wipe" data-rv>
-        <div class="ph"><button class="lbtile" type="button" data-full="assets/elephant-gift.webp" data-cap="Ceramic Elephant with White Tea" aria-label="View Ceramic Elephant with White Tea larger"><img src="assets/elephant-gift.webp" alt="Ceramic Elephant with white tea" loading="lazy" width="900" height="711"></button></div>
+        <div class="ph"><button class="lbtile" type="button" data-full="assets/elephant-gift-t.webp" data-cap="Ceramic Elephant with White Tea" aria-label="View Ceramic Elephant with White Tea larger"><img src="assets/elephant-gift-t.webp" alt="Ceramic Elephant with white tea" loading="lazy" width="660" height="645"></button></div>
         <div>
           <div class="kicker">Exclusive Keepsake</div>
           <h3>Ceramic Elephant with White Tea</h3>
@@ -1128,12 +1128,12 @@ document.querySelectorAll('[data-carousel]').forEach(function(car){
 
 /* THE PICKER: three fixed questions, deterministic result, WhatsApp handoff */
 var PRODUCTS={
-  black:{name:'Rwanda Orthodox Black Tea',img:'assets/black-tea.webp',price:'7,500 RWF · 125g white tin',order:'the Rwanda Orthodox Black Tea (125g white tin, 7,500 RWF)'},
-  green:{name:'Rwanda Orthodox Green Tea',img:'assets/green-tea.webp',price:'9,000 RWF · 125g',order:'the Rwanda Orthodox Green Tea (125g, 9,000 RWF)'},
-  white:{name:'White Tea in a Ceramic Elephant',img:'assets/elephant-gold.webp',price:'From 48,500 RWF · 125g . Red . Green . Gold editions',order:'the White Tea in Ceramic Elephant (125g). Which editions are in stock?'},
-  beans:{name:'Premium Rwanda Arabica',img:'assets/arabica-tin.webp',price:'12,000 RWF · 250g whole bean tin',order:'the Premium Rwanda Arabica (250g whole bean tin, 12,000 RWF)'},
-  ground:{name:'Ground Arabica',img:'assets/arabica-ground.webp',price:'15,000 RWF · 500g pouch',order:'the Ground Arabica (500g pouch, 15,000 RWF)'},
-  agasake:{name:'Agasake Basket with Green Tea',img:'assets/agasake.webp',price:'16,000 RWF · Handwoven, 125g green tea',order:'the Agasake Basket with Green Tea (16,000 RWF)'}
+  black:{name:'Rwanda Orthodox Black Tea',img:'assets/black-tea-t.webp',price:'7,500 RWF · 125g white tin',order:'the Rwanda Orthodox Black Tea (125g white tin, 7,500 RWF)'},
+  green:{name:'Rwanda Orthodox Green Tea',img:'assets/green-tea-t.webp',price:'9,000 RWF · 125g',order:'the Rwanda Orthodox Green Tea (125g, 9,000 RWF)'},
+  white:{name:'White Tea in a Ceramic Elephant',img:'assets/elephant-gold-t.webp',price:'From 48,500 RWF · 125g . Red . Green . Gold editions',order:'the White Tea in Ceramic Elephant (125g). Which editions are in stock?'},
+  beans:{name:'Premium Rwanda Arabica',img:'assets/arabica-tin-t.webp',price:'12,000 RWF · 250g whole bean tin',order:'the Premium Rwanda Arabica (250g whole bean tin, 12,000 RWF)'},
+  ground:{name:'Ground Arabica',img:'assets/arabica-ground-t.webp',price:'15,000 RWF · 500g pouch',order:'the Ground Arabica (500g pouch, 15,000 RWF)'},
+  agasake:{name:'Agasake Basket with Green Tea',img:'assets/agasake-t.webp',price:'16,000 RWF · Handwoven, 125g green tea',order:'the Agasake Basket with Green Tea (16,000 RWF)'}
 };
 var QUESTIONS=[
   {title:'Who is this for?',opts:[
@@ -1206,11 +1206,11 @@ pickerRender();
 function fieldErr(id,msg){var el=document.getElementById(id);var w=el.closest('.field');w.classList.add('has-error');w.querySelector('.err').textContent=msg;}
 function fieldOk(id){var el=document.getElementById(id);el.closest('.field').classList.remove('has-error');}
 var GIFTS={
-  gold:{name:'Gold Elephant with White Tea',price:'72,500 RWF each',img:'assets/elephant-gold.webp',alt:'Ceramic Elephant, Gold edition'},
-  redgreen:{name:'Red or Green Elephant with White Tea',price:'48,500 RWF each',img:'assets/elephant-red.webp',alt:'Ceramic Elephant, Red edition'},
-  agasake:{name:'Agasake Basket with Green Tea',price:'16,000 RWF each',img:'assets/agasake.webp',alt:'Agasake basket with green tea'},
-  tins:{name:'Tea and Coffee Tins',price:'from 7,500 RWF each',img:'assets/black-tea.webp',alt:'Rwanda Orthodox Black Tea tin'},
-  advise:{name:'Advise me on the right gift',price:'Quote on WhatsApp',img:'assets/elephant-gold.webp',alt:'Ceramic Elephant, Gold edition'}
+  gold:{name:'Gold Elephant with White Tea',price:'72,500 RWF each',img:'assets/elephant-gold-t.webp',alt:'Ceramic Elephant, Gold edition'},
+  redgreen:{name:'Red or Green Elephant with White Tea',price:'48,500 RWF each',img:'assets/elephant-red-t.webp',alt:'Ceramic Elephant, Red edition'},
+  agasake:{name:'Agasake Basket with Green Tea',price:'16,000 RWF each',img:'assets/agasake-t.webp',alt:'Agasake basket with green tea'},
+  tins:{name:'Tea and Coffee Tins',price:'from 7,500 RWF each',img:'assets/black-tea-t.webp',alt:'Rwanda Orthodox Black Tea tin'},
+  advise:{name:'Advise me on the right gift',price:'Quote on WhatsApp',img:'assets/elephant-gold-t.webp',alt:'Ceramic Elephant, Gold edition'}
 };
 var selGift='gold';
 function updateBrief(){
